@@ -1,4 +1,5 @@
 import { colors } from "./src/principles/colors";
+import { spacing } from "./src/principles/spacing";
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -6,6 +7,7 @@ export default {
   theme: {
     extend: {
       colors,
+      spacing,
     },
   },
   plugins: [],

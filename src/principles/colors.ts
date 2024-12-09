@@ -1,6 +1,4 @@
-type RecursiveKeyValuePair<K, V> = {
-  [key: string]: V | RecursiveKeyValuePair<K, V>;
-};
+import { RecursiveKeyValuePair } from "./types";
 
 export const colors: RecursiveKeyValuePair<string, string> = {
   black: "#000000",
