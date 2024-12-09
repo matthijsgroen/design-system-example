@@ -1,11 +1,13 @@
 import type { Meta, StoryObj } from "@storybook/react";
+import { fn } from "@storybook/test";
 
-import Text from "./Text";
+import { Button } from "./Button";
+import Text from "@/ui/atoms/Text";
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = {
-  title: "Atoms/Text",
-  component: Text,
+  title: "Molecules/Button",
+  component: Button,
   parameters: {
     // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/configure/story-layout
     layout: "centered",
@@ -14,7 +16,10 @@ const meta = {
   tags: ["autodocs"],
   // More on argTypes: https://storybook.js.org/docs/api/argtypes
   // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args
-} satisfies Meta<typeof Text>;
+  args: {
+    onClick: fn(),
+  },
+} satisfies Meta<typeof Button>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -23,38 +28,38 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     colors: {
-      text: "black",
+      background: "gray-200",
     },
-    children: "Hello World",
-  },
-};
-
-export const Colored: Story = {
-  args: {
-    colors: {
-      text: "teal-400",
-    },
-    children: "Hello World",
-  },
-};
-
-export const Bold: Story = {
-  args: {
-    colors: {
-      text: "black",
-    },
-    className: "font-bold",
     children: "Hello World",
   },
 };
 
 export const Gradient: Story = {
   args: {
-    as: "span",
     colors: {
-      text: ["black", "blue-400", "yellow-600"],
+      background: ["indigo-200", "purple-700"],
     },
-    className: "font-bold",
-    children: "Hello World",
+    children: <Text colors={{ text: "white" }}>Hello World</Text>,
+  },
+};
+
+export const GradientOutline: Story = {
+  args: {
+    colors: {
+      border: ["indigo-200", "purple-700"],
+    },
+    children: <Text colors={{ text: "black" }}>Hello World</Text>,
+  },
+};
+
+export const GradientAllTheThings: Story = {
+  args: {
+    colors: {
+      border: ["indigo-200", "purple-700"],
+      background: ["indigo-50", "purple-100"],
+    },
+    children: (
+      <Text colors={{ text: ["indigo-200", "purple-700"] }}>Hello World</Text>
+    ),
   },
 };

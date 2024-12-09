@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import Text from "./Text";
+import { Container } from "./Container";
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = {
-  title: "Atoms/Text",
-  component: Text,
+  title: "Atoms/Container",
+  component: Container,
   parameters: {
     // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/configure/story-layout
     layout: "centered",
@@ -14,7 +14,7 @@ const meta = {
   tags: ["autodocs"],
   // More on argTypes: https://storybook.js.org/docs/api/argtypes
   // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args
-} satisfies Meta<typeof Text>;
+} satisfies Meta<typeof Container>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -22,39 +22,11 @@ type Story = StoryObj<typeof meta>;
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
 export const Default: Story = {
   args: {
+    className: "p-2",
     colors: {
-      text: "black",
+      border: "black",
+      background: "gray-200",
     },
-    children: "Hello World",
-  },
-};
-
-export const Colored: Story = {
-  args: {
-    colors: {
-      text: "teal-400",
-    },
-    children: "Hello World",
-  },
-};
-
-export const Bold: Story = {
-  args: {
-    colors: {
-      text: "black",
-    },
-    className: "font-bold",
-    children: "Hello World",
-  },
-};
-
-export const Gradient: Story = {
-  args: {
-    as: "span",
-    colors: {
-      text: ["black", "blue-400", "yellow-600"],
-    },
-    className: "font-bold",
     children: "Hello World",
   },
 };
