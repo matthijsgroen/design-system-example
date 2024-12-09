@@ -9,3 +9,7 @@ Local setup:
 For further development:
 
 4. `yarn dlx @yarnpkg/sdks vscode` ([details](https://yarnpkg.com/getting-started/editor-sdks))
+
+## Goal
+
+Get a page with titles, text, highlight frames, and a reaction section with speech bubbles, that can be themed
