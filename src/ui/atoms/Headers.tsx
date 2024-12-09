@@ -4,6 +4,13 @@ import clsx from "clsx/lite";
 
 export type HeaderProps = TextProps;
 
+/**
+ * Level 1 header
+ *
+ * It wraps the content in a span, so that a
+ * color gradient of the text is until the end of the text,
+ * instead of the end of the width of the container
+ */
 export const Header1: FC<TextProps> = ({ children, ...props }) => {
   return (
     <h1 className="mt-lg mb-md">
@@ -18,6 +25,13 @@ export const Header1: FC<TextProps> = ({ children, ...props }) => {
   );
 };
 
+/**
+ * Level 2 header
+ *
+ * It wraps the content in a span, so that a
+ * color gradient of the text is until the end of the text,
+ * instead of the end of the width of the container
+ */
 export const Header2: FC<TextProps> = ({ children, ...props }) => {
   return (
     <h2 className="mt-lg mb-md">
