@@ -1,5 +1,5 @@
-import { Palette } from "@/principles/types";
-import { colorToHex, gradient, isGradient, single } from "@/utils/colors";
+import { Palette } from "@/ui/principles/types";
+import { colorToHex, gradient, isGradient, single } from "@/ui/utils/colors";
 import { clsx } from "clsx/lite";
 import { FC, JSX, PropsWithChildren } from "react";
 

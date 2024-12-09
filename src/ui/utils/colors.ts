@@ -1,5 +1,5 @@
-import { colors } from "@/principles/colors";
-import { Color, ColorOrGradient, Gradient } from "@/principles/types";
+import { colors } from "@/ui/principles/colors";
+import { Color, ColorOrGradient, Gradient } from "@/ui/principles/types";
 
 export const colorToHex = (color: Color): string => {
   const [colorName, step] = color.split("-");

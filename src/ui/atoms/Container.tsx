@@ -1,4 +1,4 @@
-import { Palette } from "@/principles/types";
+import { Palette } from "@/ui/principles/types";
 import clsx from "clsx/lite";
 import { FC, PropsWithChildren } from "react";
 

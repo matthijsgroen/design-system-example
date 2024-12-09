@@ -1,5 +1,5 @@
-import { colors } from "./src/principles/colors";
-import { spacing } from "./src/principles/spacing";
+import { colors } from "./src/ui/principles/colors";
+import { spacing } from "./src/ui/principles/spacing";
 
 /** @type {import('tailwindcss').Config} */
 export default {

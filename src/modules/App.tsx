@@ -1,10 +1,10 @@
-import React from "react";
-import Text from "./atoms/Text";
-import { Header1, Header2 } from "./atoms/Headers";
-import { Page } from "./atoms/Page";
-import { Container } from "./atoms/Container";
+import Text from "@/ui/atoms/Text";
+import { Header1, Header2 } from "@/ui/atoms/Headers";
+import { Page } from "@/ui/atoms/Page";
+import { Container } from "@/ui/atoms/Container";
+import { FC } from "react";
 
-export const App = () => {
+export const App: FC = () => {
   return (
     <Page>
       <Header1 colors={{ text: ["teal-400", "black"] }}>Hello World</Header1>

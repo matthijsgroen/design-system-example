@@ -11,6 +11,4 @@ export type Gradient = [Color, Color, ...Color[]];
 
 export type ColorOrGradient = Color | Gradient;
 
-export type Palette<T extends string> = {
-  [key in T]: ColorOrGradient;
-};
+export type Palette<T extends string> = Record<T, ColorOrGradient>;
