@@ -63,3 +63,33 @@ export const GradientAllTheThings: Story = {
     ),
   },
 };
+
+export const OutlineRoundLg: Story = {
+  args: {
+    colors: {
+      border: ["indigo-200", "purple-700"],
+    },
+    borderRadius: "lg",
+    children: <Text colors={{ text: "black" }}>Hello World</Text>,
+  },
+};
+
+export const OutlineRoundXL: Story = {
+  args: {
+    colors: {
+      border: ["indigo-200", "purple-700"],
+    },
+    borderRadius: "xl",
+    children: <Text colors={{ text: "black" }}>Hello World</Text>,
+  },
+};
+
+export const OutlineRoundFull: Story = {
+  args: {
+    colors: {
+      border: ["indigo-200", "purple-700"],
+    },
+    borderRadius: "full",
+    children: <Text colors={{ text: "black" }}>Hello World</Text>,
+  },
+};

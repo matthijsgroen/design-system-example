@@ -3,6 +3,7 @@ import { Header1, Header2 } from "@/ui/atoms/Headers";
 import { Page } from "@/ui/atoms/Page";
 import { Container } from "@/ui/atoms/Container";
 import { FC } from "react";
+import { Button } from "@/ui/molecules/Button";
 
 export const App: FC = () => {
   return (
@@ -13,28 +14,21 @@ export const App: FC = () => {
       <Container
         className="p-md"
         colors={{
-          background: ["indigo-200", "purple-700"],
+          background: ["indigo-50", "indigo-200"],
           // border: ["black", "red-400"],
         }}
+        borderRadius="2xl"
       >
-        <Text colors={{ text: ["teal-400", "purple-700"] }}>Hello World</Text>
+        <Text colors={{ text: "gray-700" }}>Hello World</Text>
       </Container>
-      <Container
-        className="p-sm"
-        as="button"
+      <Button
+        className="mt-md"
         colors={{
-          background: ["indigo-200", "purple-700"],
-          // border: ["black", "red-400"],
-        }}
-        extraProps={{
-          className: "active:scale-95 mt-md",
-          onClick: () => {
-            console.log("Hello World");
-          },
+          border: ["indigo-200", "purple-700"],
         }}
       >
         <Text colors={{ text: ["teal-400", "purple-700"] }}>Hello World</Text>
-      </Container>
+      </Button>
     </Page>
   );
 };
