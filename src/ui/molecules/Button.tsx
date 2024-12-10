@@ -1,31 +1,28 @@
-import { FC, PropsWithChildren } from "react";
-import { BorderProps, Container } from "../atoms/Container";
+import { ComponentProps, FC, PropsWithChildren } from "react";
+import { Container } from "../atoms/Container";
 import { Palette } from "../principles/types";
-import clsx from "clsx/lite";
+import { addTailwindDefaults } from "../utils/tailwind";
 
 export type ButtonProps = PropsWithChildren<{
-  onClick?: VoidFunction;
   colors?: Partial<Palette<"background" | "border">>;
-  className?: string;
 }> &
-  BorderProps;
+  ComponentProps<"button">;
 
 export const Button: FC<ButtonProps> = ({
   children,
-  onClick,
   colors,
-  className,
-  borderRadius = "md",
-  borderWidth = 2,
+  ...buttonProps
 }) => {
+  const { className, ...rest } = buttonProps;
   return (
     <Container<"button">
       as="button"
       colors={colors}
-      extraProps={{ onClick, className: "active:scale-95" }}
-      className={clsx("text-xs p-2", className)}
-      borderWidth={borderWidth}
-      borderRadius={borderRadius}
+      extraProps={rest}
+      className={addTailwindDefaults(
+        className,
+        "p-2 rounded-md active:scale-95 "
+      )}
     >
       {children}
     </Container>

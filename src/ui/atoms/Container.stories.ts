@@ -22,11 +22,36 @@ type Story = StoryObj<typeof meta>;
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
 export const Default: Story = {
   args: {
-    className: "p-2",
+    className: "p-2 border-2 rounded-lg",
     colors: {
       border: "black",
       background: "gray-200",
     },
+
+    children: "Hello World",
+  },
+};
+
+export const GradientBorder: Story = {
+  args: {
+    className: "p-2 border-2 rounded-lg",
+    colors: {
+      border: ["black", "blue-500"],
+      background: "gray-200",
+    },
+
+    children: "Hello World",
+  },
+};
+
+export const GradientThickBorder: Story = {
+  args: {
+    className: "p-2 border-4 rounded-lg",
+    colors: {
+      border: ["black", "blue-500"],
+      background: "gray-200",
+    },
+
     children: "Hello World",
   },
 };

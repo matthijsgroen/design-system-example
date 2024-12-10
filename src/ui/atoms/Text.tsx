@@ -5,14 +5,14 @@ import { FC, JSX, PropsWithChildren } from "react";
 
 export type TextProps = PropsWithChildren<{
   /**
-   * default is "p"
+   * default is "span" (as neutral as possible)
    */
   as?: keyof JSX.IntrinsicElements;
   className?: string;
   colors: Palette<"text">;
 }>;
 
-const Text: FC<TextProps> = ({ children, as = "p", colors, className }) => {
+const Text: FC<TextProps> = ({ children, as = "span", colors, className }) => {
   const Component = as;
 
   if (isGradient(colors.text)) {

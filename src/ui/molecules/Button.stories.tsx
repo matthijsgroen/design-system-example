@@ -46,8 +46,9 @@ export const Gradient: Story = {
 export const GradientOutline: Story = {
   args: {
     colors: {
-      border: ["indigo-200", "purple-700"],
+      border: ["indigo-200", "purple-900"],
     },
+    className: "border-2",
     children: <Text colors={{ text: "black" }}>Hello World</Text>,
   },
 };
@@ -58,6 +59,7 @@ export const GradientAllTheThings: Story = {
       border: ["indigo-200", "purple-700"],
       background: ["indigo-50", "purple-100"],
     },
+    className: "border-2",
     children: (
       <Text colors={{ text: ["indigo-200", "purple-700"] }}>Hello World</Text>
     ),
@@ -69,7 +71,7 @@ export const OutlineRoundLg: Story = {
     colors: {
       border: ["indigo-200", "purple-700"],
     },
-    borderRadius: "lg",
+    className: "rounded-lg border-4",
     children: <Text colors={{ text: "black" }}>Hello World</Text>,
   },
 };
@@ -79,7 +81,17 @@ export const OutlineRoundXL: Story = {
     colors: {
       border: ["indigo-200", "purple-700"],
     },
-    borderRadius: "xl",
+    className: "rounded-xl border-2",
+    children: <Text colors={{ text: "black" }}>Hello World</Text>,
+  },
+};
+
+export const DifferentPadding: Story = {
+  args: {
+    colors: {
+      border: ["indigo-200", "purple-700"],
+    },
+    className: "rounded-xl p-6 border-2",
     children: <Text colors={{ text: "black" }}>Hello World</Text>,
   },
 };
@@ -89,7 +101,7 @@ export const OutlineRoundFull: Story = {
     colors: {
       border: ["indigo-200", "purple-700"],
     },
-    borderRadius: "full",
+    className: "rounded-full border-2",
     children: <Text colors={{ text: "black" }}>Hello World</Text>,
   },
 };

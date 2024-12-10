@@ -1,0 +1,21 @@
+@supports (mask-composite: exclude) {
+  .borderGradient {
+    position: relative;
+  }
+  .borderGradient::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    border-width: var(--border-width);
+    margin-top: calc(-1 * var(--border-width));
+    margin-left: calc(-1 * var(--border-width));
+    width: calc(100% + var(--border-width) * 2);
+    height: calc(100% + var(--border-width) * 2);
+    border-color: transparent;
+    background: var(--border-gradient) border-box;
+    mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+}
