@@ -21,7 +21,7 @@ export const Button: FC<ButtonProps> = ({
       extraProps={rest}
       className={addTailwindDefaults(
         className,
-        "p-2 rounded-md active:scale-95 "
+        "p-2 rounded-md active:scale-95"
       )}
     >
       {children}
